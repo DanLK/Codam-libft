@@ -6,7 +6,7 @@
 /*   By: dloustal <dloustal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 09:19:26 by dloustal          #+#    #+#             */
-/*   Updated: 2024/11/12 17:48:46 by dloustal         ###   ########.fr       */
+/*   Updated: 2024/11/21 09:13:01 by dloustal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i])
 	{
@@ -23,3 +25,10 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
+
+
+// int	main(void)
+// {
+// 	ft_putstr_fd(NULL, 1);
+// 	return (0);
+// }

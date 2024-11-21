@@ -6,7 +6,7 @@
 /*   By: dloustal <dloustal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 12:46:31 by dloustal          #+#    #+#             */
-/*   Updated: 2024/11/12 16:54:05 by dloustal         ###   ########.fr       */
+/*   Updated: 2024/11/21 09:13:36 by dloustal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,12 +83,12 @@ char	**ft_split(char const *s, char c)
 	int		current_len;
 
 	if (!s)
-		return (0);
+		return (NULL);
 	result = (char **)malloc((count_words(s, c) + 1) * sizeof(char *));
 	if (!result)
 		return (result);
 	index_word = 0;
-	result[count_words(s, c)] = 0;
+	result[count_words(s, c)] = NULL;
 	while (*s)
 	{
 		while ((unsigned char)*s == (unsigned char)c)

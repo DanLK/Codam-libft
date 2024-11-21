@@ -6,7 +6,7 @@
 /*   By: dloustal <dloustal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 09:28:56 by dloustal          #+#    #+#             */
-/*   Updated: 2024/11/05 09:59:10 by dloustal         ###   ########.fr       */
+/*   Updated: 2024/11/21 09:06:06 by dloustal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putendl_fd(char *s, int fd)
 {
 	int		i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i])
 	{
@@ -23,4 +25,10 @@ void	ft_putendl_fd(char *s, int fd)
 		i++;
 	}
 	write(fd, "\n", 1);
+}
+
+int	main(void)
+{
+	ft_putendl_fd(NULL, 1);
+	return (0);
 }
