@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: dloustal <dloustal@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/10/29 14:01:02 by dloustal          #+#    #+#              #
-#    Updated: 2024/11/12 13:49:03 by dloustal         ###   ########.fr        #
+#                                                         ::::::::             #
+#    Makefile                                           :+:    :+:             #
+#                                                      +:+                     #
+#    By: dloustal <dloustal@student.42.fr>            +#+                      #
+#                                                    +#+                       #
+#    Created: 2024/10/29 14:01:02 by dloustal      #+#    #+#                  #
+#    Updated: 2025/01/06 13:34:03 by dloustal      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,15 @@ SOURCES = ft_atoi.c \
 			ft_putchar_fd.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
-			ft_putnbr_fd.c
+			ft_putnbr_fd.c \
+			printf/ft_printf.c \
+			printf/ft_printc.c \
+			printf/ft_prints.c \
+			printf/ft_printp.c \
+			printf/ft_printd.c \
+			printf/ft_printu.c \
+			printf/ft_printx.c \
+			printf/ft_print_percent.c
 BONUSSOURCES = ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstsize.c \

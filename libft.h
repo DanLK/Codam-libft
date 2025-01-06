@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: dloustal <dloustal@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 13:58:09 by dloustal          #+#    #+#             */
-/*   Updated: 2024/11/12 17:47:43 by dloustal         ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   libft.h                                            :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: dloustal <dloustal@student.42.fr>            +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2024/10/08 13:58:09 by dloustal      #+#    #+#                 */
+/*   Updated: 2025/01/06 13:32:14 by dloustal      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,5 +108,23 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+// PRINTF
+
+int	ft_printc(char c);
+
+int	ft_prints(char *str);
+
+int	ft_printp(void	*ptr);
+
+int	ft_printd(int x);
+
+int	ft_printu(unsigned int x);
+
+int	ft_printx(unsigned int x, char spec);
+
+int	ft_print_percent(void);
+
+int	ft_printf(const char *format, ...);
 
 #endif
