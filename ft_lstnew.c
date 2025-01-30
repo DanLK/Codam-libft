@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: dloustal <dloustal@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 16:34:53 by dloustal          #+#    #+#             */
-/*   Updated: 2024/11/11 13:01:57 by dloustal         ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   ft_lstnew.c                                        :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: dloustal <dloustal@student.42.fr>            +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2024/11/07 16:34:53 by dloustal      #+#    #+#                 */
+/*   Updated: 2025/01/06 14:48:06 by dloustal      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ t_list	*ft_lstnew(void *content)
 
 	new = (t_list *)malloc(sizeof(t_list));
 	if (!new)
-		return (new);
+		return (NULL);
 	new->content = (void *)content;
-	new->next = 0;
+	new->next = NULL;
 	return (new);
 }
 // #include <stdio.h>

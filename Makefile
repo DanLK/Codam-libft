@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         ::::::::             #
-#    Makefile                                           :+:    :+:             #
-#                                                      +:+                     #
-#    By: dloustal <dloustal@student.42.fr>            +#+                      #
-#                                                    +#+                       #
-#    Created: 2024/10/29 14:01:02 by dloustal      #+#    #+#                  #
-#    Updated: 2025/01/06 13:34:03 by dloustal      ########   odam.nl          #
-#                                                                              #
-# **************************************************************************** #
-
 NAME = libft.a
 SOURCES = ft_atoi.c \
 			ft_bzero.c \
@@ -53,8 +41,8 @@ SOURCES = ft_atoi.c \
 			printf/ft_printd.c \
 			printf/ft_printu.c \
 			printf/ft_printx.c \
-			printf/ft_print_percent.c
-BONUSSOURCES = ft_lstnew.c \
+			printf/ft_print_percent.c \
+			ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstsize.c \
 			ft_lstlast.c \
@@ -62,9 +50,13 @@ BONUSSOURCES = ft_lstnew.c \
 			ft_lstdelone.c \
 			ft_lstclear.c \
 			ft_lstiter.c \
-			ft_lstmap.c
-OBJFILES = $(SOURCES:.c=.o)
-BONUSFILES = $(BONUSSOURCES:.c=.o)
+			ft_lstmap.c \
+			gnl/get_next_line_bonus.c \
+			gnl/get_next_line_utils_bonus.c \
+			gnl/get_next_line.c \
+			gnl/get_next_line_utils.c
+OBJ_DIR = ./obj
+OBJFILES = $(SOURCES:%.c=$(OBJ_DIR)/%.o)
 CFLAGS += -Wall -Werror -Wextra
 
 all: $(NAME)
@@ -72,18 +64,17 @@ all: $(NAME)
 $(NAME): $(OBJFILES)
 	ar rcs $(NAME) $(OBJFILES)
 
-bonus: $(NAME) $(BONUSFILES)
-	ar rcs $(NAME) $(BONUSFILES)
-
-%.o: %.c 
+$(OBJ_DIR)/%.o: %.c 
+	mkdir -p $(dir $@)
 	$(CC) -c $(CFLAGS) -o $@ $<
 
 clean: 
-	rm -f $(OBJFILES) $(BONUSFILES)
+	rm -f $(OBJFILES)
+	rm -r -f $(OBJ_DIR)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all bonus clean fclean re
+.PHONY: all clean fclean re
