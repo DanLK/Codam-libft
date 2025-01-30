@@ -52,9 +52,7 @@ SOURCES = ft_atoi.c \
 			ft_lstiter.c \
 			ft_lstmap.c \
 			gnl/get_next_line_bonus.c \
-			gnl/get_next_line_utils_bonus.c \
-			gnl/get_next_line.c \
-			gnl/get_next_line_utils.c
+			gnl/get_next_line_utils_bonus.c 
 OBJ_DIR = ./obj
 OBJFILES = $(SOURCES:%.c=$(OBJ_DIR)/%.o)
 CFLAGS += -Wall -Werror -Wextra

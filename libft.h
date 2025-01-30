@@ -6,7 +6,7 @@
 /*   By: dloustal <dloustal@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/10/08 13:58:09 by dloustal      #+#    #+#                 */
-/*   Updated: 2025/01/06 13:32:14 by dloustal      ########   odam.nl         */
+/*   Updated: 2025/01/30 16:46:35 by dloustal      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,5 +126,9 @@ int	ft_printx(unsigned int x, char spec);
 int	ft_print_percent(void);
 
 int	ft_printf(const char *format, ...);
+
+// GNL
+
+char	*get_next_line(int fd);
 
 #endif
